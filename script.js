@@ -9,7 +9,6 @@ function generatePackingList() {
     if (numbnuit > 10) {
         addItemToContainer(itemsContainer, ' <b> <i>Va laver tes affaires ! regarde le nombre de nuits que tu vas passer </i></b>',numbnuit);
     }
-    // addItemToContainer(itemsContainer, 'Va laver tes affaires si tu prends plus de 10 nuits');
 
     // Valise
     addItemToContainer(itemsContainer, 'Sac à dos/valise', 1);
