@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html lang="fr-FR">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible",content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <meta name="description" content="">
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"defer></script>
-    </head>
-    <body>
-    </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  <title>Packing List Generator</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Packing List Generateur</h1>
+
+        <form id="packingForm">
+            <label for="nuit">Nombre de nuits: </label><br/>
+            <input type="number" id="nuit" min="1" max="365" value="3" required name="nuit"><br/>
+            <!-- <span id="nuitError" style="color: red;"></span><br/> -->
+
+            <label for="climat">Climat: </label><br/>
+            <select id="climat" name="climat">
+                <option value="moderé">Moderé</option>
+                <option value="chaud">Chaud</option>
+                <option value="froid">Froid</option>
+                
+            </select>
+            <!--- pour demaré une function name +()-->
+            <button type="button" onclick="generatePackingList()"> Envoyer</button>
+            
+        </form>
+
+        <div id="packingList" style="display: none;">
+            <h2>Resultat:</h2>
+            <div id="items"></div>
+            <!-- Ce bouton déclenche la fonction JavaScript resetForm() lorsque cliqué -->
+            <button onclick="resetForm()">Recommencer</button>
+
+        </div>
+    </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
