@@ -5,7 +5,12 @@ function generatePackingList() {
   
     const itemsContainer = document.getElementById('items');
     itemsContainer.innerHTML = '';
-  
+
+    if (numbnuit > 10) {
+        addItemToContainer(itemsContainer, ' <b> <i>Va laver tes affaires ! regarde le nombre de nuits que tu vas passer </i></b>',numbnuit);
+    }
+    // addItemToContainer(itemsContainer, 'Va laver tes affaires si tu prends plus de 10 nuits');
+
     // Valise
     addItemToContainer(itemsContainer, 'Sac à dos/valise', 1);
   
@@ -39,14 +44,22 @@ function generatePackingList() {
     }
     addItemToContainer(itemsContainer, 'Pantalons', numbpants, 3);
   
-    // Afficher une veste dans tous les cas, mais dépend du climat
-    addItemToContainer(itemsContainer, 'Veste', 1);
+    // Veste Tongs Claquettes
+    if (climate === "chaud") {
+        addItemToContainer(itemsContainer, 'Tongs/Claquettes', 1); 
+    } else {
+        addItemToContainer(itemsContainer, 'Veste', 1);    
+    }
   
     // Afficher une paire de chaussures si plus de 6 nuits
     if (numbnuit > 6) {
       addItemToContainer(itemsContainer, 'Paires de chaussures', 1);
     }
-    
+
+    if (climate === "froid") {
+        addItemToContainer(itemsContainer, 'Gants et Bonnet', 1);
+      }
+
     const packingListDiv = document.getElementById('packingList');
     packingListDiv.style.display = 'block';
   }
