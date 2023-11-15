@@ -7,7 +7,7 @@ function generatePackingList() {
     itemsContainer.innerHTML = '';
 
     if (numbnuit > 10) {
-        addItemToContainer(itemsContainer, ' <b> <i>Va laver tes affaires ! regarde le nombre de nuits que tu vas passer </i></b>',numbnuit);
+        addItemToContainer(itemsContainer, ' <b> <i>Va laver tes affaires ! Regarde le nombre de nuits que tu vas passer </i></b>',numbnuit);
     }
 
     // Valise
