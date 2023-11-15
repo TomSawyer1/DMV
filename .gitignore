@@ -1,0 +1,39 @@
+# Ignore les fichiers système
+.DS_Store
+
+# Ignore les fichiers de configuration pour certains éditeurs
+.vscode/
+.idea/
+
+# Ignore les fichiers de sauvegarde et les fichiers temporaires
+*~
+*.swp
+
+# Ignore les fichiers de dépendances et les dossiers générés
+node_modules/
+dist/
+build/
+
+# Ignore les fichiers de configuration sensibles
+.env
+config.js
+
+# Ignore les fichiers d'environnement spécifiques
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore les fichiers de logs et les fichiers de sortie
+logs/
+*.log
+npm-debug.log*
+
+# Ignore les fichiers de build spécifiques
+build/
+bin/
+
+# Ignore les fichiers de sauvegarde des bases de données
+*.sqlite
+*.sqlite3
+*.db
